@@ -152,6 +152,7 @@
             <scope>provided</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <!-- Añadimos la dependency necesaria para conectar el proyecto con BBDD -->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>

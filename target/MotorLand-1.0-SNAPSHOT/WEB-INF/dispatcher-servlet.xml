@@ -20,6 +20,8 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
+                <prop key="alta.htm">AltaController</prop><!-- Indicamos en el dispatcher que cuando se intente acceder a "alta.htm" busquemos en las etiquetas bean AltaController -->
+                <prop key="listado.htm">ListadoController</prop><!-- Indicamos en el dispatcher que cuando se intente acceder a "listado.htm" busquemos en las etiquetas bean ListadoController -->
             </props>
         </property>
     </bean>
@@ -35,5 +37,8 @@
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
+    
+    <bean name="AltaController" class="com.mycompany.motorland.Controllers.AltaController" /> <!-- Redirigimos a la clase AltaController, incluida en el paquete cuya ruta se indica -->
+    <bean name="ListadoController" class="com.mycompany.motorland.Controllers.ListadoController" /> <!-- Redirigimos a la clase ListadoController, incluida en el paquete cuya ruta se indica -->
 
 </beans>
