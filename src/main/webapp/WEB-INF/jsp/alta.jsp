@@ -19,16 +19,18 @@
     <body>
         <div class="row">
             <div class="col-6, offset-3"><!-- Le damos un ancho de 6 y lo centramos dejando 3 vacios a la izquierda -->
-                <h1>Ingrese un nuevo motor en la BBDD</h1>
+                <h3>Ingrese un nuevo motor en la BBDD <a href="listado.htm" class="btn btn-primary"><i class="fas fa-plus-square"></i>Listado Motores</a></h3><!-- Este botón redirecciona a la página de listado -->
                 <br>
         <form:form>
-            <form:errors path="*" element="div" className="alert alert-danger"></form:errors><!-- Con esto mostraremos si existe algún error cuando redirijamos al formulario desde el post del AltaController -->
+            <form:errors path="modelo" element="div" className="alert alert-danger"></form:errors><!-- Con esto mostraremos si existe algún error cuando redirijamos al formulario desde el post del AltaController -->
             <form:label path="modelo">Modelo</form:label><!-- Asociamos la label al input correspondiente -->
             <form:input path="modelo" cssClass="form-control"/><!-- asociamos el campo modelo del motor, al pasar el objeto como lo hemos hecho en el controlador no hay que especificar en el form el nombre del objeto -->
             <form:label path="fabricante">Fabricante</form:label>
             <form:input path="fabricante" cssClass="form-control"/>
+            <form:errors path="potencia" element="div" className="alert alert-danger"></form:errors>
             <form:label path="potencia">Potencia</form:label>
             <form:input path="potencia" cssClass="form-control"/>
+            <form:errors path="peso" element="div" className="alert alert-danger"></form:errors>
             <form:label path="peso">Peso</form:label>
             <form:input path="peso" cssClass="form-control"/>
             <form:label path="cantidad">Cantidad</form:label>
